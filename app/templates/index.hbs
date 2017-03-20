@@ -1,0 +1,20 @@
+<h1>Beat Airbnb: EpiBnB</h1>
+
+<ul>
+  {{#each rentals as |rental|}}
+    {{rental-tile rental=rental destroyRental="destroyRental"}}
+  {{/each}}
+</ul>
+
+<h2>Announcements from manager</h2>
+  {{#each announcements as |announcement|}}
+    {{announcement-tile announcement=announcement}}
+  {{/each}}
+
+
+{{new-rental saveRental2='saveRental3'}}
+{{new-announcement saveAnnouncement = 'saveAnnouncement'}}
+
+
+{{#link-to "about"}}about{{/link-to}}
+{{#link-to "contact"}}Contact{{/link-to}}

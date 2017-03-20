@@ -1,0 +1,21 @@
+{{#if addNewAnnouncement}}
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="bigNews">Big News</label>
+        {{input value=bigNews id="bigNews"}}
+      </div>
+      <div class="form-group">
+        <label for="upcomingSales">Upcoming Sales</label>
+        {{input value=upcomingSales id="upcomingSales"}}
+      </div>
+      <div class="form-group">
+        <label for="weatherWarnings">Weather Warning</label>
+        {{input value=weatherWarnings id="weatherWarnings"}}
+      </div>
+      <button {{action "saveAnnouncement"}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'announcementFormShow'}}>Show form for announcements</button>
+{{/if}}
