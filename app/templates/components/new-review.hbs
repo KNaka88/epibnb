@@ -1,0 +1,19 @@
+{{#if reviewForm}}
+  <h4>Create New Review</h4>
+
+  <div>
+    <form>
+      <label for="author">Author</label>
+      {{input value=author id="author"}}
+
+      <label for="rating">Rating</label>
+      {{input value=rating id="rating"}}
+
+      <label for="content">Content</label>
+      {{input value=content id="content"}}
+      <button {{action 'createReview'}}>Post Review </button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'reviewFormShow'}}>Create Review</button>
+{{/if}}

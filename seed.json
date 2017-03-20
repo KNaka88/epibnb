@@ -2,5 +2,14 @@
     "upcomingSales": "New apartments in the west of portland for a good price!!",
     "weatherWarnings" : "Flood is coming!!",
     "bigNews" : "Portland Spring Apartment Fairs"
-  }]
+  }],
+  "reviews": [{
+  "author": "Andrea",
+  "rating": 4,
+  "content": "Did not fall down."
+}, {
+  "author": "Alex",
+  "rating": 9,
+  "content": "Nice view of the volcano!"
+}]
 }
