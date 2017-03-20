@@ -21,6 +21,10 @@ export default Ember.Route.extend({
       rental.destroyRecord();
       this.transitionTo('index');
     },
+    destroyAnnouncement(announcement) {
+      announcement.destroyRecord();
+      this.transitionTo('index');
+    },
 
     saveRental3(params) {
       var newRental = this.store.createRecord('rental', params);
@@ -31,6 +35,16 @@ export default Ember.Route.extend({
     saveAnnouncement(params) {
       var newAnnouncement = this.store.createRecord('announcement', params);
       newAnnouncement.save();
+      this.transitionTo('index');
+    },
+
+    update(rental, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined){
+          rental.set(key, params[key]);
+        }
+      });
+      rental.save();
       this.transitionTo('index');
     }
   }

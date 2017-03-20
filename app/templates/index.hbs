@@ -2,13 +2,13 @@
 
 <ul>
   {{#each rentals as |rental|}}
-    {{rental-tile rental=rental destroyRental="destroyRental"}}
+    {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
   {{/each}}
 </ul>
 
 <h2>Announcements from manager</h2>
   {{#each announcements as |announcement|}}
-    {{announcement-tile announcement=announcement}}
+    {{announcement-tile announcement=announcement destroyAnnouncement="destroyAnnouncement"}}
   {{/each}}
 
 
